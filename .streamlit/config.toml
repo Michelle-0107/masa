@@ -1,0 +1,9 @@
+[theme]
+# 强制使用深色模式作为基础
+base="dark"
+
+# 覆盖主题颜色，配合我们在 CSS 中设定的极夜蓝
+backgroundColor="#0A0F1D"
+secondaryBackgroundColor="#121A2F"
+textColor="#F8FAFC"
+font="sans serif"
