@@ -301,7 +301,7 @@ elif page == "🔍 Climate Risk Explorer":
 # PAGE 3 — PRECIPITATION FORECAST & FINANCIAL IMPACT
 # ═══════════════════════════════════════════════════════════════════════════════
 elif page == "🤖 Precipitation Forecast":
-    st.markdown("<div class='section-header'>🤖 Stage 1: Climate-Driven Forecast & Financial Proxy</div>",
+    st.markdown("<div class='section-header'>🤖 Climate-Driven Forecast & Financial Proxy</div>",
                 unsafe_allow_html=True)
     st.markdown(
         "**Target variable:** Annual Precipitation (mm) | **Methodology:** Multi-Variable Regression & Actuarial Proxy Calculation")
@@ -404,7 +404,7 @@ elif page == "🤖 Precipitation Forecast":
                     </div>""", unsafe_allow_html=True)
             st.divider()
 
-        st.markdown("### 📊 Stage 1 Summary Report")
+        st.markdown("### 📊 Summary Report")
         st.dataframe(pd.DataFrame(stage1_results), use_container_width=True, hide_index=True)
 
         st.markdown("""
@@ -566,14 +566,14 @@ elif page == "⚡ Scenario Analysis & Stress Test":
                 <div class="insight-box" style="border-left: 4px solid #EF4444;">
                 <b>🚨 Tail Risk Assessment (Stress Test)</b>
                 Under this extreme 1-in-100 year shock scenario (incorporating a {shock_multiplier}x sudden external multiplier), {country}'s emissions trajectory surges by <b>{abs(delta_pct):.1f}%</b> against BAU.<br><br>
-                This severe downside shock directly exacerbates the long-term physical risks modeled in Stage 1, while simultaneously forcing a massive capital crunch as regulatory penalties for stranded assets trigger immediately.
+                This severe downside shock directly exacerbates the long-term physical risks modeled, while simultaneously forcing a massive capital crunch as regulatory penalties for stranded assets trigger immediately.
                 </div>""", unsafe_allow_html=True)
             else:
                 st.markdown(f"""
                 <div class="insight-box">
                 <b>📝 Closing the Loop: Transition vs. Physical Risk</b>
                 Under this scenario, {country}'s emissions trajectory deviates by <b>{delta_pct:.1f}%</b> against BAU.<br><br>
-                Crucially, these transition pathways <b>directly influence the long-term physical risks captured in Stage 1</b>. Policy-aligned scenarios lower climate volatility, while mitigating the insurer's exposure to stranded assets.
+                Crucially, these transition pathways <b>directly influence the long-term physical risks captured</b>. Policy-aligned scenarios lower climate volatility, while mitigating the insurer's exposure to stranded assets.
                 </div>""", unsafe_allow_html=True)
 
         with col_b:
