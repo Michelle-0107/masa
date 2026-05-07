@@ -1,7 +1,7 @@
 # 🌏 R-Ignite | Interactive Climate Risk Dashboard
 ### MASA Hackathon 2026 - Actuarial Consulting for Reinsurance
 
-R-Ignite is an advanced analytical dashboard built to assess climate-related risk exposure for multinational reinsurance firms, specifically focusing on **Indonesia** and **Malaysia**. [cite_start]The platform translates complex environmental indicators (GHG emissions, forest cover, fossil fuel usage) into actionable financial insights and physical hazard forecasts[cite: 242, 260].
+[cite_start]R-Ignite is an advanced analytical dashboard built to assess climate-related risk exposure for multinational reinsurance firms, specifically focusing on **Indonesia** and **Malaysia**[cite: 58]. The platform translates complex environmental indicators (GHG emissions, forest cover, fossil fuel usage) into actionable financial insights and physical hazard forecasts.
 
 ---
 
@@ -19,56 +19,52 @@ Ensure you have Python 3.9+ installed. The following core libraries are required
 Install all dependencies using the provided `requirements.txt` or via pip:
 ```bash
 pip install streamlit plotly pandas numpy scikit-learn
+```
 
 ### 3. Execution
-Run the dashboard locally using the Streamlit CLI: streamlit run dashboard.py
+Run the dashboard locally using the Streamlit CLI:
+```bash
+streamlit run dashboard.py
+```
 
+---
 
-
-📊 Dashboard Structure
+## 📊 Dashboard Structure
 The dashboard is divided into four strategic modules:
 
-1. Executive Summary
-KPI Monitoring: Real-time tracking of GHG emissions, Fossil Fuel usage, and Forest Cover changes since 2000.
+### 1. Executive Summary
+- **KPI Monitoring:** Real-time tracking of changes in GHG emissions, fossil fuel usage, and forest cover since 2000.
+- **Normalized Trends:** Rebased index (2000 = 100) comparing climate trajectories across countries.
+- **Strategic Recommendations:** Direct actuarial mandates for premium pricing adjustments and capital allocation.
 
-Normalized Trends: Rebased index (2000 = 100) comparing cross-country climate trajectories.
+### 2. Climate Risk Explorer
+- **Visual Analytics:** Interactive multi-plot views of regional environmental indicators.
+- **Correlation Matrix:** Risk heatmaps identifying statistical relationships between land-use changes and climate states.
 
-Strategic Recommendations: Direct actuarial mandates for pricing adjustments and capital allocation.
+### 3. Precipitation Forecast (Stage 1)
+- **Predictive Modeling:** Utilizes a Multivariate Linear Regression model to forecast annual precipitation.
+- **EAL Proxy:** Calculates the Expected Annual Loss (EAL) impact using an industry-standard elasticity multiplier (default: 1.5x) to estimate property/flood claims.
+- **Backtesting:** Includes Mean Absolute Percentage Error (MAPE) validation against 2023 actual data.
 
-2. Climate Risk Explorer
-Visual Analytics: Interactive multi-plot views of regional environmental indicators.
+### 4. Scenario Analysis & Stress Test (Stage 2)
+- **Transition Pathways:** Simulates 2030 GHG trajectories under various scenarios, such as Paris Agreement Aligned vs. Business as Usual.
+- **Tail Risk Stressing:** Impact modeling for 1-in-100 year extreme events, including massive deforestation or sudden emission surges.
+- **Capital Impact:** Estimates transition risk capital relief or penalties based on regulatory stress-testing frameworks.
 
-Correlation Matrix: Heatmaps identifying the statistical relationships between land-use changes and climate states.
+---
 
-3. Precipitation Forecast (Stage 1)
-Predictive Modeling: Uses a Multivariate Linear Regression model to forecast annual precipitation.
+## 🛠️ Technical Methodology
 
-EAL Proxy: Calculates the Expected Annual Loss (EAL) impact using an industry-standard elasticity multiplier (default: 1.5x) to estimate property/flood claims.
+- **Modeling Strategy:** The system utilizes Ordinary Least Squares (OLS) regression to ensure transparency and interpretability for actuarial decision-making and regulatory submissions.
+- **Feature Engineering:** Incorporates lagged variables (Lag-1) and 3-year rolling averages to capture environmental "memory" and soil saturation potential.
+- **Data Source:** Integrated with World Bank World Development Indicators (WDI) data spanning 2000–2023.
 
-Backtesting: Includes MAPE (Mean Absolute Percentage Error) validation against 2023 actuals.
+---
 
-4. Scenario Analysis & Stress Test (Stage 2)
-Transition Pathways: Simulates 2030 GHG trajectories under different scenarios (e.g., Paris Agreement Aligned vs. Business as Usual).
+## 👥 Contributors
+[cite_start]**Predictive Minds Team** [cite: 2]
 
-Tail Risk Stressing: Modeled shocks for 1-in-100 year events (e.g., extreme deforestation or sudden emission surges).
-
-Capital Impact: Estimates Transition Risk Capital Relief or Penalties based on regulatory stress-testing frameworks.
-
-🛠️ Technical Methodology
-
-Modeling Strategy: The system utilizes Ordinary Least Squares (OLS) Regression for transparency and interpretability in actuarial decision-making.  
-
-Feature Engineering: Incorporates lagged variables (Lag-1) and 3-year rolling averages to capture environmental "memory" and soil saturation potential.
-
-Data Source: Integrated with World Bank World Development Indicators (WDI) data spanning 2000–2023.
-
-👥 Contributors
-Predictive Minds Team
-
-Michelle Lee Xin Hui (Team Leader)
-
-Lim Zhan Xuan (Report Editor)
-
-Ng Wan Yang (Data & Modelling)
-
-Chiew Xin Yuan (Actuarial & Risk Analysis)
+- [cite_start]**Michelle Lee Xin Hui** (Team Leader) [cite: 3]
+- [cite_start]**Lim Zhan Xuan** (Report Editor) [cite: 3]
+- [cite_start]**Ng Wan Yang** (Data & Modelling) [cite: 3]
+- [cite_start]**Chiew Xin Yuan** (Actuarial & Risk Analysis) [cite: 3]
