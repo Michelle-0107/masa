@@ -418,7 +418,7 @@ elif page == "🤖 Precipitation Forecast":
 # PAGE 4 — SCENARIO ANALYSIS & STRESS TEST
 # ═══════════════════════════════════════════════════════════════════════════════
 elif page == "⚡ Scenario Analysis & Stress Test":
-    st.markdown("<div class='section-header'>⚡ Stage 2: Scenario Analysis & Tail Risk Stress Testing</div>",
+    st.markdown("<div class='section-header'>⚡ Scenario Analysis & Tail Risk Stress Testing</div>",
                 unsafe_allow_html=True)
     st.markdown(
         "**Capital Modeling:** Assessing the impact of transition pathways and extreme shocks on GHG trajectory and Transition Capital to 2030")
